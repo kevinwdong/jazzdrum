@@ -9,83 +9,69 @@
     color: #F5E8C7;
     font-weight: 600;
     font-size: xx-large;
-    text-align: center;
+    text-align: center;f
 }
 
 main {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
     align-items: center;
     justify-items: center;
 }
 
 .drum {
-    width: 100px;
-    height: 100px;
-    font-size: xx-large;
-    font-weight: 600;
-    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
     background-color: #435585;
     color: #F5E8C7;
-    border-color: #818FB4;
-    border-width: 20px;
+    /* border-color: #818FB4;
+    border-width: 20px; */
     border-radius: 50%;
+    border: 20px solid #818fb4;
+}
+
+.tom {
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
 }
 
 .tom1 {
-    grid-area: 3 / 1 / 4 / 2;
-    width: 100px;
-    height: 100px;;
+    grid-area: 2 / 4 / 3 / 5;
+    
 }
 
 .tom2 {
-    grid-area: 3 / 4 / 4 / 5;
-    width: 100px;
-    height: 100px;
+    grid-area: 2 / 5 / 3 / 6;
+
 }
 
 .tom3 {
-    grid-area: 3 / 5 / 4 / 6;
-    width: 100px;
-    height: 100px;
+    grid-area: 2 / 6 / 3 / 7;
 }
 
 .tom4 {
-    grid-area: 3 / 8 / 4 / 9;
-    width: 100px;
-    height: 100px;
+    grid-area: 3 / 7 / 4 / 8;
 }
 
-.crash1 {
+.crash {
     grid-area: 1 / 2 / 3 / 4;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
-.crash2 {
-    grid-area: 1 / 6 / 3 / 8;
-    width: 150px;
-    height: 150px;
-}
-
-.snare1 {
+.snare {
     grid-area: 3 / 2 / 5 / 4;
-    width: 200px;
-    height: 200px;
-}
-
-.snare2 {
-    grid-area: 3 / 6 / 5 / 8;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 .kickBass {
-    grid-area: 5 / 3 / 9 / 7;
-    width: 300px;
-    height: 300px;
+    grid-area: 3 / 4 / 6 / 7;
+    width: 400px;
+    height: 400px;
 }
 
 footer {

@@ -14,45 +14,35 @@ document.addEventListener("keypress", function(event) {
 
 function drumSounds(key) {
     switch(key) {
-            
-        case "A":
+             
+        case "J":
             let tom1 = new Audio("drumSounds/tom-1.mp3");
             tom1.play();
         break;
-
-        case "D":
+            
+        case "K":
             let tom2 = new Audio("drumSounds/tom-2.mp3");
             tom2.play();
         break;
-
-        case "J":
+                
+        case "L":
             let tom3 = new Audio("drumSounds/tom-3.mp3");
             tom3.play();
-        break;
-
-        case "L":
+         break;
+                    
+        case "I":
             let tom4 = new Audio("drumSounds/tom-4.mp3");
             tom4.play();
         break;
-
-        case "S":
-            let snare1 = new Audio("drumSounds/snare.mp3");
-            snare1.play();
-        break;
-
-        case "K":
-            let snare2 = new Audio("drumSounds/snare.mp3");
-            snare2.play();
-        break;
-
-        case "W":
-            let crash1 = new Audio("drumSounds/crash.mp3");
-            crash1.play();
-        break;
-
-        case "I":
-            let crash2 = new Audio("drumSounds/crash.mp3");
-            crash2.play();
+                        
+        case "F":
+            let snare = new Audio("drumSounds/snare.mp3");
+            snare.play();
+        break;                   
+                            
+        case "D":
+            let crash = new Audio("drumSounds/crash.mp3");
+            crash.play();
         break;
 
         case "SPACE":
