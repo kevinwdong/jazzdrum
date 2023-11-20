@@ -78,4 +78,7 @@ footer {
     font-size: large;
 }
 
- 
+.pressed {
+    box-shadow: 0 0 30px 0 #F5E8C7;
+    opacity: 0.7;
+}

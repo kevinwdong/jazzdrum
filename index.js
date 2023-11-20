@@ -1,14 +1,20 @@
 
+
+
+
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll("button")[i].addEventListener("click", function() {
         let buttonInnerHTML = this.innerHTML
         drumSounds(buttonInnerHTML);
+        drumAnimation(buttonInnerHTML);
      });
 }
 
 
 document.addEventListener("keypress", function(event) {
     drumSounds(event.key);
+    drumAnimation(event.key);
+
 });
 
 
@@ -45,7 +51,7 @@ function drumSounds(key) {
             crash.play();
         break;
 
-        case "SPACE":
+        case "B":
             let kickBass1 = new Audio("drumSounds/kick-bass.mp3");
             kickBass1.play();
         break;
@@ -55,6 +61,12 @@ function drumSounds(key) {
             kickBass2.play();
         break;
 
-    default: console.log(buttonInnerHTML);
+    default: console.log(key);
     }
 }
+
+function drumAnimation(currentKey) {
+    let pressedButton = document.querySelector("." + currentKey);     
+         pressedButton.classList.add("drumanimation");
+         setTimeout(function() {pressedButton.classList.remove("drumanimation");}, 100);
+ }
