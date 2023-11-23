@@ -78,7 +78,24 @@ footer {
     font-size: large;
 }
 
-.pressed {
+button.drum-hit {
+    animation: drum-hit 0.1s ease-in forwards;
+}
+
+@keyframes drum-hit {
+    0% {
+        box-shadow: 0 0 30px 0 #F5E8C7;
+        opacity: 0.7;
+    }
+    100% {
+        box-shadow: none;
+        opacity: 1;
+    }
+}
+
+
+
+.drumanimation {
     box-shadow: 0 0 30px 0 #F5E8C7;
     opacity: 0.7;
 }

@@ -21,37 +21,37 @@ document.addEventListener("keypress", function(event) {
 function drumSounds(key) {
     switch(key) {
              
-        case "J":
+        case "j":
             let tom1 = new Audio("drumSounds/tom-1.mp3");
             tom1.play();
         break;
             
-        case "K":
+        case "k":
             let tom2 = new Audio("drumSounds/tom-2.mp3");
             tom2.play();
         break;
                 
-        case "L":
+        case "l":
             let tom3 = new Audio("drumSounds/tom-3.mp3");
             tom3.play();
          break;
                     
-        case "I":
+        case "i":
             let tom4 = new Audio("drumSounds/tom-4.mp3");
             tom4.play();
         break;
                         
-        case "F":
+        case "f":
             let snare = new Audio("drumSounds/snare.mp3");
             snare.play();
         break;                   
                             
-        case "D":
+        case "d":
             let crash = new Audio("drumSounds/crash.mp3");
             crash.play();
         break;
 
-        case "B":
+        case "b":
             let kickBass1 = new Audio("drumSounds/kick-bass.mp3");
             kickBass1.play();
         break;
@@ -60,13 +60,19 @@ function drumSounds(key) {
             let kickBass2 = new Audio("drumSounds/kick-bass.mp3");
             kickBass2.play();
         break;
-
+y
     default: console.log(key);
     }
 }
 
 function drumAnimation(currentKey) {
     let pressedButton = document.querySelector("." + currentKey);     
-         pressedButton.classList.add("drumanimation");
-         setTimeout(function() {pressedButton.classList.remove("drumanimation");}, 100);
+    
+    pressedButton.classList.add("drum-hit")
+
+    pressedButton.addEventListener('animationend', () => {
+       pressedButton.classList.remove("drum-hit") 
+    }, { once: true })
+        //  pressedButton.classList.add("drumanimation");
+        //  setTimeout(function() {pressedButton.classList.remove("drumanimation");}, 100);
  }
